@@ -1,0 +1,141 @@
+<%= image_tag "/images/legacy-home/round-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/princess-cut-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/oval-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/marquise-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/pear-shaped-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/cushion-cut-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/emerald-cut-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/asscher-cut-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/radiant-cut-diamond-hover.jpg", class: "preload-image", alt: nil %>
+<%= image_tag "/images/legacy-home/heart-shaped-diamond-hover.jpg", class: "preload-image", alt: nil %>
+
+<div class="static-page home-page">
+  <div class="content-frame large">
+    <div class="top-section">
+      <section class="introduction gray-links">
+        <h1>GIA Loose Diamonds</h1>
+        <p>Welcome to Lumera, the best place to buy a diamond. We offer the <strong>lowest price</strong> (up to 40% lower than jewelry store prices), combined with <strong>excellent service</strong> (<span class="text-link text-underline link-gray" data-popup="introduction--diamond-consultant">diamond consultants</span> are available to answer any question); allowing you to find the best option from 30,000 GIA diamonds.</p>
+
+        <%= render "shared/external_element_popup", name: "DiamondConsultant", selector: "introduction--diamond-consultant" %>
+
+        <a href="/loose-diamonds/search" class="blue button">SEARCH FOR A DIAMOND<span class="search-button-now"> NOW</span></a>
+      </section>
+
+      <div class="search-by-shape">
+        <ul class="no-space-left show-for-375-up" id="shapes">
+          <li><a href="/loose-diamonds/search?s=Round" class="r">round</a></li>
+          <li><a href="/loose-diamonds/search?s=Princess-Cut" class="pr">princess</a></li>
+          <li><a href="/loose-diamonds/search?s=Oval" class="o">oval</a></li>
+          <li><a href="/loose-diamonds/search?s=Marquise" class="m">marquise</a></li>
+          <li><a href="/loose-diamonds/search?s=Pear-Shaped" class="p">pear</a></li>
+          <li><a href="/loose-diamonds/search?s=Cushion-Cut" class="c">cushion</a></li>
+          <li><a href="/loose-diamonds/search?s=Emerald-Cut" class="e">emerald</a></li>
+          <li><a href="/loose-diamonds/search?s=Asscher" class="a">asscher</a></li>
+          <li><a href="/loose-diamonds/search?s=Radiant-Cut" class="ra">radiant</a></li>
+          <li><a href="/loose-diamonds/search?s=Heart-Shaped" class="h">heart</a></li>
+        </ul>
+      </div>
+
+      <div class="diamond-earrings">
+        <div class="diamond-stud-earrings-cta" class="clearfix">
+          <section>
+            <span class="h2">
+              <a href="/diamond-stud-earrings" class="blue-text">Looking For Earrings? ></a>
+            </span>
+            <p>
+              Choose from our assortment of hand matched <a href="/diamond-stud-earrings">Diamond Stud Earrings</a> set in 14k gold.
+            </p>
+          </section>
+
+          <a href="/diamond-stud-earrings" class="zero-line-height gray-link">
+            <%= image_tag "/images/home-page/earrings_large_cta.jpg", alt: "Diamond Stud Earrings", title: "Diamond Stud Earrings" %>
+          </a>
+        </div>
+      </div>
+
+      <section class="engagement-rings">
+        <h2>Engagement Rings</h2>
+        <br>
+        <a href="/diamonds/search">Start with a Diamond ></a><br>
+        <a href="/engagement-rings/search">Start with a Setting ></a>
+
+        <a class="image-link" href="/engagement-rings">
+          <img src="<%= image_path('/images/home-page/engagement-rings.png') %>" alt="Diamond Engagement Rings" title="Diamond Engagement Rings" />
+        </a>
+      </section>
+
+      <section class="wedding-bands">
+        <h2>Looking For A Wedding Band?</h2>
+        <a href="/wedding-bands/search?g=Mens">Men's &gt;</a><br>
+        <a href="/wedding-bands/search?g=Womens">Women's &gt;</a>
+
+        <a class="image-link" href="/wedding-bands/search">
+          <img src="<%= image_path('/images/home-page/wedding-rings-stacked.png') %>" alt="Wedding Bands" title="Wedding Bands" />
+        </a>
+      </section>
+
+      <div class="show-me">
+        <span class="title">Show me:</span>
+        <div class="link-container">
+          <a class="solitaire" href="/engagement-rings/search?t=Solitaire">Solitaire</a>
+        </div>
+        <div class="link-container">
+          <a class="halo" href="/engagement-rings/search?t=Halo">Halo</a>
+        </div>
+        <div class="link-container">
+          <a class="diamond-accent" href="/engagement-rings/search?t=Diamond+Accent">Diamond Accent</a>
+        </div>
+        <div class="link-container">
+          <a class="three-stone" href="/engagement-rings/search?t=3-Stone">Three Stone</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-row gray-links">
+      <section class="why-choose-lumera">
+        <span class="h2">Why Choose Lumera?</span>
+        <ul>
+          <li><a data-popup="why--selection" role="button" tabindex="0">Selection</a></li>
+          <li><a data-popup="why--value" role="button" tabindex="0">Value</a></li>
+          <li><a data-popup="why--trade-in" role="button" tabindex="0">Trade-In</a></li>
+          <li><a data-popup="why--quality" role="button" tabindex="0">Quality</a></li>
+          <li><a data-popup="why--returns" role="button" tabindex="0">Returns</a></li>
+          <li><a data-popup="why--security" role="button" tabindex="0">Security</a></li>
+        </ul>
+        <%= render "shared/react_component", name: "HomePageWhyChooseLumeraPopup" %>
+      </section>
+      <section class="diamond-shape-guide">
+        <span class="h2">Diamond Shape Guide</span>
+        <ul>
+          <li><a href="/diamond-education/round-diamonds" title="Loose Round Diamonds">Round Diamonds</a></li>
+          <li><a href="/diamond-education/princess-cut-diamond" title="Loose Princess Cut Diamonds">Princess Cut</a></li>
+          <li><a href="/diamond-education/oval-diamond" title="Loose Oval Diamonds">Oval Diamonds</a></li>
+          <li><a href="/diamond-education/marquise-diamond" title="Loose Marquise Cut Diamonds">Marquise Diamonds</a></li>
+          <li><a href="/diamond-education/pear-shaped-diamond" title="Loose Pear Shaped Diamonds">Pear Shapes</a></li>
+          <li><a href="/diamond-education/cushion-cut-diamond" title="Loose Cushion Cut Diamonds">Cushion Cut</a></li>
+          <li><a href="/diamond-education/emerald-cut-diamond" title="Loose Emerald Cut Diamonds">Emerald Cut</a></li>
+          <li><a href="/diamond-education/asscher-cut-diamond" title="Loose Asscher Cut Diamonds">Asscher Cut</a></li>
+          <li><a href="/diamond-education/radiant-cut-diamond" title="Loose Radiant Cut Diamonds">Radiant Cut</a></li>
+          <li><a href="/diamond-education/heart-shaped-diamond" title="Loose Heart Shaped Diamonds">Heart Shaped</a></li>
+        </ul>
+      </section>
+      <section class="diamond-buying-guide">
+        <span class="h2">Diamond Buying Guide</span>
+        <p>Read our <a href="/buying-diamonds/choose-a-diamond">step-by-step guide on how to choose a diamond</a>, access our <a href="/buying-diamonds/ring-sizer">printable ring sizer</a>, and learn about <a href="/buying-diamonds/diamond-appraisal">appraisals</a>, <a href="/buying-diamonds/diamond-insurance">insurance</a>, and <a href="/buying-diamonds/diamond-buying-mistakes">common diamond buying mistakes.</a></p>
+      </section>
+      <section class="four-cs">
+        <span class="h2">Diamond 4 C's & more ></span>
+        <ul>
+          <li><a href="/diamond-education/diamond-carat-weight" title="Diamond Carat Size">Carat Size</a></li>
+          <li><a href="/diamond-education/diamond-clarity" title="Diamond Clarity Chart">Clarity Chart</a></li>
+          <li><a href="/diamond-education/diamond-color" title="Diamond Color Scale">Color Chart</a></li>
+          <li><a href="/diamond-education/diamond-cut" title="Loose Diamond Cuts">Cut</a></li>
+          <li>&nbsp;</li>
+          <li><a href="/diamond-education/diamond-anatomy">Anatomy</a></li>
+          <li><a href="/diamond-education/diamond-certification">Certification</a></li>
+          <li><a href="/diamond-education/glossary">Glossary</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

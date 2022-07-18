@@ -1,0 +1,40 @@
+<%= render "layouts/header" %>
+
+<div class="app-container">
+  <%= render "layouts/flash_messages" %>
+  <%= yield %>
+</div>
+
+<%= render "layouts/footer" %>
+
+<%= redux_store_hydration_data %>
+
+<% if @nouislider %>
+  <%# nouislider needs to be available to application code %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/13.1.5/nouislider.min.js" defer="true"></script>
+<% end %>
+
+<%# For CommonsChunkPlugin %>
+<%= javascript_pack_tag "manifest", defer: true %>
+<%= javascript_pack_tag "vendor", defer: true %>
+
+<%= javascript_pack_tag 'application', defer: true %>
+<%= javascript_pack_tag 'global', defer: true %>
+
+<% Array(react_bundles_to_render).each do |bundle| %>
+  <%= javascript_pack_tag bundle, defer: true %>
+<% end %>
+
+<%= google_analytics if enable_google_analytics? %>
+<%= render "shared/react_component", name: "ServerDataSynchronizer" %>
+<script type="text/javascript">
+  <%# We have to manually put this into <head> because we don't have all of
+    the styles until we get to this point of the template %>
+  // document.querySelector('head').innerHTML += '<%= escape_javascript(content_for(:react_styles)) %>';
+  // var styles = document.getElementById('styles-target);
+
+  // if (styles) {
+  //   document.querySelector('head').appendChild(styles);
+  // }
+</script>
+<%= render "shared/chaport" %>

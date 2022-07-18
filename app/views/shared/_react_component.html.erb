@@ -1,0 +1,23 @@
+<%
+  prerender ||= false
+  prerender = false if Rails.env.development? && !ENV['SERVER_SIDE_RENDERING']
+  trace ||= Rails.env.development?
+  trace = false unless Rails.env.development?
+  props ||= false
+  html_options ||= {}
+%>
+
+<% if prerender %>
+  <% react_helmet_app = react_component_hash(name, { html_options: html_options, prerender: true, trace: trace}.merge(props ? {props: props} : {})) %>
+
+  <%# Flush so that we only output the value from the last server render, where %>
+  <%# all of the styles will have been concatenated by react-helmet. %>
+  <% content_for :react_styles, flush: true do %>
+    <%= react_helmet_app['stylesInner'] %>
+  <% end %>
+
+  <%= react_helmet_app['componentHtml'] %>
+
+<% else %>
+  <%= react_component(name, { html_options: html_options, prerender: false, trace: trace}.merge(props ? {props: props} : {})) %>
+<% end %>
