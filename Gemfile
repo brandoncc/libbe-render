@@ -66,6 +66,6 @@ end
 gem "shakapacker", "= 6.5"
 
 gem "react_on_rails", "= 13.0"
-gem "mini_racer"
 gem "mini_racer", platforms: :ruby
-gem "mini_racer", platforms: :ruby
+
+gem "foundation-rails", " ~> 5.4.5"
