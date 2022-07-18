@@ -28,5 +28,8 @@
   "browserslist": [
     "defaults"
   ],
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
 }
