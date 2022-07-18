@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "[bin/server] Starting rails, webpack-dev-server, and webpacker concurrently"
+foreman start -f Procfile.dev
