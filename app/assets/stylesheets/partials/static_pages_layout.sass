@@ -1,0 +1,44 @@
+.static-page
+  &.diamond-comparison .content-frame
+    overflow-x: visible
+    overflow-y: visible
+
+  .content-frame
+    padding: 20px
+    overflow-x: hidden
+    overflow-y: visible
+    position: relative
+
+  &.buying-diamonds, &.diamond-education, &.customer-service, &.jewelry-education
+    .content-frame
+      padding: 20px 23px
+
+  .content-frame.large
+    padding: 25px
+
+  .right-menu-and-left-section-container
+    @media only screen and (min-width: 1025px)
+      display: flex
+      flex: 1
+      flex-direction: row
+
+
+  .left-menu-and-content-container
+    display: flex
+    flex: 1
+    flex-direction: column
+
+    @media only screen and (min-width: 641px)
+      flex-direction: row
+
+  .right-menu
+    @media only screen and (min-width: 1025px)
+      flex-basis: 183px
+      flex-grow: 0
+      flex-shrink: 0
+
+    box-sizing: border-box
+    border-left: 1px solid  #ebebeb
+    padding: 21px 14px
+
+

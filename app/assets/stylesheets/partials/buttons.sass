@@ -1,0 +1,63 @@
+button
+  height: 60px
+  border: 0
+  outline: none
+  border-radius: 6px
+  background: rgb(25, 73, 121)
+  font-size: 16px
+  color: white
+  cursor: pointer
+  text-transform: uppercase
+  padding: 20px
+  font-weight: 500
+  transition: all 0.3s ease
+
+  &:focus
+    background: rgb(25, 73, 121)
+    color: white
+
+button.text-link
+  background: transparent
+  padding: 0
+  margin: 0
+  display: inline
+  font-size: inherit
+  text-transform: none
+  background: transparent
+  height: auto
+  cursor: pointer
+
+  &, &:hover, &:focus
+    background: transparent
+    color: #21528d
+
+button.basic-button
+  background: initial
+
+button.primary
+  background: #052a56
+  transition: all 0.3s ease
+
+button:hover, button.primary:hover
+  background: rgb(23, 62, 101)
+
+a.button.blue,
+button.button.blue,
+input[type="button"].button.blue,
+input[type="submit"].button.blue
+  height: 40px
+  background: #1c487e
+  border-radius: 5px
+  border-style: none
+  color: #ffffff
+  display: inline-block
+  font-size: 14px
+  font-weight: bold
+  line-height: 14px
+  padding: 12px 20px 14px
+  text-decoration: none
+  text-transform: uppercase
+  cursor: pointer
+
+  &:hover
+    text-decoration: underline

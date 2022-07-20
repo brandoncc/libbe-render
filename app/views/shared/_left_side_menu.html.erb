@@ -1,0 +1,11 @@
+<% if !Rails.env.development? || ENV["SERVER_SIDE_RENDERING"] %>
+  <% react_helmet_app = react_component_hash("SideMenuRouter", prerender: true) %>
+
+  <% content_for :react_styles do %>
+    <%= react_helmet_app['style'] %>
+  <% end %>
+
+  <%= react_helmet_app["componentHtml"] %>
+<% else %>
+  <%= react_component("SideMenuRouter", prerender: false)%>
+<% end %>

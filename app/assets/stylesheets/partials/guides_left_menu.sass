@@ -1,0 +1,118 @@
+.static-page
+  .left-nav-menu
+    @media only screen and (min-width: 641px)
+      flex-basis: 184px
+      flex-grow: 0
+      flex-shrink: 0
+      border-left: 1px solid #eaecef
+
+    @media (max-width: 724px)
+      display: none
+
+    background: #f6f6f6
+    padding-top: 15px
+    padding-bottom: 20px
+    font-size: 13px
+    line-height: 16px
+    box-sizing: border-box
+
+    a
+      display: block
+      padding: 2px 0 2px 20px
+      color: #2C373D
+      text-decoration: none
+
+    a.active
+      background-color: #fff
+      border-top: 1px solid #d4d5d5
+      border-bottom: 1px solid #d4d5d5
+
+    a#title
+      font-weight: 700
+      color: #062750
+      text-decoration: none
+      font-size: 14px
+      display: block
+      padding: 8px 0 7px
+      margin-left: 20px
+      margin-top: 2px
+
+    ul.side-menu
+      width: 100% !important
+      margin-left: 0
+      margin-top: 0
+
+    ul.side-menu a
+      font-family: "acumin-pro", Arial, Helvetica, sans-serif
+      font-display: swap
+      font-size: 14px
+      color: #696969
+      line-height: 2.14
+      margin-left: 22px
+
+    ul.side-menu a.active
+      color: #022958
+      font-weight: 600
+      line-height: 27px
+      padding-top: 1px
+      padding-bottom: 3px
+
+    a#title.active, ul.side-menu a.active
+      border-top: 1px solid #ebebeb
+      border-bottom: 1px solid #ebebeb
+      background: #fff
+      margin-left: 0px
+      padding-left: 20px
+
+    ul.side-menu li.expanded
+      border-top: 1px solid #ebebeb
+      border-bottom: 1px solid #ebebeb
+      background: #fff
+      padding-bottom: 9px
+      margin-bottom: 2px
+
+    ul.side-menu li.expanded a.active
+      border: none
+      padding-left: 0px
+      padding-top: 0px
+
+    ul.side-menu li
+      margin: 0
+      padding: 0
+      position: relative
+
+    ul.side-menu a
+      padding: 0
+
+    ul.side-menu li.expanded a
+      padding: 0
+
+    ul.side-menu li.expanded li
+      list-style-type: disc
+      margin-left: 20px
+
+    ul.side-menu li.expanded ul
+      margin-left: 20px
+
+    ul.side-menu li.expanded a
+      margin-left: 0
+      padding-top: 0
+      padding-bottom: 0
+      line-height: 22px
+
+    ul.side-menu li.expanded > a,
+    ul.side-menu li.expanded > a.active
+      margin-left: 20px
+      margin-bottom: 3px
+      margin-top: 2px
+      line-height: 22px
+
+    ul.side-menu li
+      margin-bottom: 0
+
+    li
+      list-style-type: none
+      padding: 2px 0
+
+    li a
+      padding: 2px 0 2px 20px

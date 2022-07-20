@@ -1,0 +1,123 @@
+$top-nav-link-color: #a9bfda
+$top-nav-link-hover-color: white
+$top-nav-link-color--active: #fff
+
+header.page-header
+  margin: 0 auto
+  max-width: 1000px
+  position: relative
+  z-index: 100
+
+  ul
+    @extend .no-item-bottom-margins
+
+    margin: 0
+    list-style: none
+
+  .logo
+    display: inline-block
+    margin-top: 19px
+    margin-bottom: 34px
+    margin-left: 22px
+    vertical-align: top
+
+    @media only screen and (max-width: 46em) // 736px
+      margin-bottom: 20px
+      margin-top: 22px
+
+  .logo--image
+    display: block
+    height: 59px
+    margin-top: -3px
+
+    @media only screen and (max-width: 46em) // 736px
+      margin-top: 0
+
+  a
+    color: #ffffff
+    font-family: 'acumin-pro', sans-serif
+    font-display: swap
+    text-decoration: none
+
+  .top-nav-right-section
+    float: right
+    font-size: 0
+    text-align: right
+
+    @media only screen and (max-width: 46em) // 736px
+      display: block
+      float: none
+      text-align: center
+
+  .main-menu
+    display: inline-block
+    margin-top: 22px
+    margin-bottom: 8px
+    padding-bottom: 4px
+    padding-right: 35px
+    padding-top: 28px
+    vertical-align: top
+    overflow: hidden
+
+    @media only screen and (max-width: 59.375em) // 950px
+      border-right: 0
+      display: block
+      margin-right: 18px
+      padding-right: 0
+
+    @media only screen and (max-width: 46em) // 736px
+      display: block
+      margin-right: 0
+      margin-top: 0
+      padding-top: 10px
+      margin-bottom: 0
+
+    & > ul
+      transition: max-height .2s
+      font-size: 0
+      overflow: hidden
+
+      @media only screen and (max-width: 45.25em) // 724px
+        display: none
+
+      a
+        color: $top-nav-link-color
+        font-size: 14px
+
+        &:hover
+          color: $top-nav-link-hover-color
+
+        &.current
+          color: $top-nav-link-color--active
+          font-weight: 600
+
+      li
+        display: inline-block
+
+      @media only screen and (min-width: 45.3125em) // 725px
+        & > li:first-of-type
+          padding-right: 19px
+
+        & > li:last-of-type
+          padding-right: 0
+
+        & > li + li
+          padding-left: 20px
+          padding-right: 19px
+
+    #main-menu-toggle
+      border-top: 1px solid white
+      background: #022958
+      color: white
+      font-size: 16px
+      padding: 4px 4px 4px 21px
+      position: relative
+      text-align: left
+      width: 100%
+      cursor: pointer
+
+      &:before
+        content: '\2630'
+        margin-right: 5px
+      @media only screen and (min-width: 45.3125em) // 725px
+        display: none

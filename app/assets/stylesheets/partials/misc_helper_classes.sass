@@ -1,0 +1,87 @@
+@mixin show-for-up($min)
+  .show-for-#{$min}-up
+    @media (max-width: #{$min - 1}px)
+      display: none
+
+@mixin hide-for-up($min)
+  .hide-for-#{$min}-up
+    @media (min-width: #{$min}px)
+      display: none
+
+@mixin show-and-hide-for-up($min)
+  @include show-for-up($min)
+  @include hide-for-up($min)
+
+.blue
+  color: #062750
+
+.gray-hr
+  border-top: solid 1px #EBEBEB
+  margin: 20px 0
+
+.no-bottom-margin
+  margin-bottom: 0
+
+.no-top-margin
+  margin-top: 0
+
+.no-margin
+  margin: 0 !important
+
+.no-padding
+  padding: 0 !important
+
+.preload-image
+  display: none
+
+.medium-bottom-margin
+  margin-bottom: 16px
+
+.medium-top-margin
+  margin-top: 16px
+
+.small-bottom-margin
+  margin-bottom: 8px
+
+.small-top-margin
+  margin-top: 8px
+
+.inline-block
+  display: inline-block
+
+.lock-scroll
+  width: 100%
+  overflow: hidden
+  position: fixed
+
+a.blueX
+  font-size: 14px
+  text-transform: uppercase
+  text-decoration: none
+  background: #062750 image-url("/images/button-bg.jpg") left top repeat-x
+  color: #FFF
+  border: solid 1px #062750
+  display: inline-block
+  padding: 2px 7px
+  color: #FFF !important
+
+a.blueX:hover
+  color: #FFF
+  text-decoration: none
+  background: #0F4078 image-url("/images/button-bg-hover.jpg") left top repeat-x
+
+.checkoutErrors
+  padding-top: 10px
+  color: orange
+  word-wrap: break-word
+
+.yellow
+  color: #F4B31B
+
+.no-top-margin-below-500-important
+  @media (max-width: 499px)
+    margin-top: 0 !important
+
+@include show-and-hide-for-up(550)
+@include show-and-hide-for-up(810)
+@include show-for-up(375)

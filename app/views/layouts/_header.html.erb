@@ -1,55 +1,24 @@
 <header class="page-header clearfix">
-  <ul class="contact-links">
-    <%# Hidden using CSS, only here for semantics of having phone number in header %>
-    <li class="phone-link-li"><a href="tel:+01-888-658-6372" class="phone-link">888-658-6372</a></li>
-    <li class="phone-modal">
-      <label for="open-contact-modal">
-        <%= image_tag "/images/header/phone-outline.svg", height: 38, width: 38 %> 888-658-6372
-      </label>
-    </li>
-    <li></li>
-  </ul>
   <a href="/" class="logo">
-    <%= image_tag "/images/header/logo--new@2x.png", alt: "Lumera Diamonds", class: "logo--image" %>
+    <%= image_tag "/images/header/logo.png", alt: "Libbe Bible", class: "logo--image" %>
   </a>
   <div class="top-nav-right-section">
     <nav class="main-menu">
       <%= render "shared/react_component", name: "MobileNav", prerender: true %>
       <ul>
-        <% if request.path =~ /^\/\loose-diamonds\// %>
-          <li>
-            <a href="/loose-diamonds/search" title="GIA Loose Diamonds" data-toggle-top-nav="diamonds">Diamonds</a>
-            <%= render partial: 'layouts/responsive_top_nav_diamonds' %>
-          </li>
-        <% else %>
-          <li>
-            <a href="/diamonds/search" title="GIA Diamonds" data-toggle-top-nav="diamonds">Diamonds</a>
-            <%= render partial: 'layouts/responsive_top_nav_diamonds' %>
-          </li>
-        <% end %>
         <li>
-          <a href="/engagement-rings" title="Engagement Rings" data-toggle-top-nav="engagement-rings">Engagement Rings</a>
-          <%= render partial: 'layouts/responsive_top_nav_engagement_rings' %>
+          <a href="/" title="Home">Home</a>
         </li>
         <li>
-          <a href="/diamond-education/index" title="4 C's of Diamonds" data-toggle-top-nav="education">Education</a>
-          <%= render partial: 'layouts/responsive_top_nav_education' %>
+          <a href="#" title="Sign Up">Sign Up</a>
         </li>
         <li>
-          <a href="/buying-diamonds/index" title="Buying Guide" data-toggle-top-nav="guidance">Guidance</a>
-          <%= render partial: 'layouts/responsive_top_nav_guidance' %>
+          <a href="#" title="The 4 Plans">The 4 Plans</a>
         </li>
         <li>
-          <a href="/customer-service/index" title="Customer Service" data-toggle-top-nav="service">Service</a>
-          <%= render partial: 'layouts/responsive_top_nav_service' %>
+          <a href="#" title="About Us">About Us</a>
         </li>
       </ul>
     </nav>
-    <section class="shopping-bag-links">
-      <%= image_tag "/images/header/shopping-bag-outline.svg", alt: "Shopping Bag" %>
-      <%= render "shared/react_component", name: "ShoppingBagLinks", prerender: true %>
-    </section>
   </div>
-
-  <%= render partial: 'layouts/contact_modal' %>
 </header>

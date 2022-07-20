@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "parentId": 0,
+    "path": "/",
+    "text": "Home"
+  },
+  {
+    "id": 2,
+    "parentId": 0,
+    "path": "#",
+    "text": "Start Your Plan!"
+  },
+  {
+    "id": 3,
+    "parentId": 0,
+    "path": "#",
+    "text": "The Plans Explained"
+  },
+  {
+    "id": 4,
+    "parentId": 0,
+    "path": "#",
+    "text": "About Us"
+  }
+]

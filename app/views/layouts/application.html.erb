@@ -1,3 +1,23 @@
+<%#
+  # This #content_for(:body_content) is a hack to support:
+  #
+  #   content_for(:react_styles) if content_for?(:react_styles)
+  #
+  # The `yield` call would run before `<head>` was compiled, but any `render`
+  # calls would not be run until after `<head>` had already been compiled. That
+  # resulted in styles for any SSR components that were rendered in a `render`
+  # call not being placed in `<head>` unless there was also a SSR component
+  # somewhere in the `yield`ed template. Even then, some styles could be
+  # missing unless the `yield`ed template was the last place an SSR component
+  # was rendered.
+  #
+  # By rendering `_body_content.html` before compiling `<head>`, We make sure
+  # that *all* `#content_for(:react_styles)` calls that need to be made during
+  # render have been made before we compile `<head>`.
+%>
+
+<% content_for(:body_content) { render partial: 'layouts/body_content' } %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,10 +27,10 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_pack_tag "application" %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= yield :body_content %>
+    <%= render 'layouts/fonts' %>
   </body>
 </html>

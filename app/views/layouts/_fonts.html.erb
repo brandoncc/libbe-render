@@ -1,0 +1,25 @@
+<script>
+  WebFontConfig = {
+    google: {
+      families: ['Open Sans:300,300i,400,400i,600,600i,700']
+    },
+    typekit: {
+      id: 'mot2gpr'
+    }
+  };
+
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+
+  (function() {
+    var css = document.createElement('link');
+    css.href = '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+    css.rel = 'stylesheet';
+    css.type = 'text/css';
+    document.getElementsByTagName('head')[0].appendChild(css);
+  })();
+</script>

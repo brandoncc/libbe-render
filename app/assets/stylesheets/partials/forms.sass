@@ -1,0 +1,50 @@
+form.standard input
+  width: 100%
+  height: 30px
+  margin-bottom: 20px
+  border: 0
+  border-bottom: 2px solid #d8d8d8
+  font-size: 16px
+  outline: none
+
+  transition: 0.2s all ease
+
+form.standard input:focus
+  border-bottom: 2px solid #052a56
+
+  transition: 0.2s all ease
+
+form.standard label
+  color: #9a9a9a
+
+form.standard fieldset
+  margin: 0
+  padding: 0
+  border: 0
+
+form.standard fieldset legend
+  color: #a9a9a9
+
+form.standard select
+  height: 30px
+  border: 0
+  outline: none
+  border-bottom: 2px solid #d8d8d8
+  -webkit-appearance: none
+  -webkit-border-radius: 0px
+  padding: 0 10px
+  background: white
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea, select
+
+  &, &:focus
+    box-shadow: none
+    border-radius: 5px
+    padding: 5px
+    height: 28px
+    line-height: 1.15
+    font-size: 14px
+
+// Override height above
+textarea, textarea:focus
+  height: auto

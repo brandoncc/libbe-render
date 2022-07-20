@@ -1,3 +1,11 @@
 import ReactOnRails from 'react-on-rails';
 
-ReactOnRails.register({});
+import withSSR from '@components/withSSR';
+
+import MobileNav from '@components/menus/MobileNav';
+import SideMenuRouter from '@src/SideMenuServerRouter';
+
+ReactOnRails.register({
+  MobileNav: withSSR(MobileNav),
+  SideMenuRouter: withSSR(SideMenuRouter),
+});

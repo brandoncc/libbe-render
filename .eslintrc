@@ -1,0 +1,65 @@
+{
+  "extends": [
+    "semistandard",
+    "semistandard-react",
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "overrides": [{
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    ],
+    "files": ['*.ts', '*.tsx'], // Your TypeScript files extension
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": ['./tsconfig.json'], // Specify it only for TypeScript files
+    },
+    "rules": {
+      // This reports errors, while @typescript-eslint/no-use-before-define
+      // doesn't. Disabling this in typescript files fixes it.
+      "no-use-before-define": "off"
+    }
+  }],
+  "plugins": ["@typescript-eslint", "react-hooks", "jsx-a11y"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
+    "space-infix-ops": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error", { "argsIgnorePattern": "^_" , "varsIgnorePattern": "^_" }
+    ]
+  },
+  "globals": {
+    "noUiSlider": true,
+    "Rails": true,
+    "Accept": true,
+    "Authorize": true,
+    "ReactComponent": false,
+    "ReactElement": false,
+    "SyntheticEvent": false,
+    "SyntheticClipboardEvent": false,
+    "SyntheticCompositionEvent": false,
+    "SyntheticInputEvent": false,
+    "SyntheticUIEvent": false,
+    "SyntheticFocusEvent": false,
+    "SyntheticKeyboardEvent": false,
+    "SyntheticMouseEvent": false,
+    "SyntheticDragEvent": false,
+    "SyntheticWheelEvent": false,
+    "SyntheticTouchEvent": false,
+    "Honeybadger": false,
+    "TimeoutID": false
+  }
+}

@@ -9,7 +9,19 @@
     "sourceMap": true,
     "target": "es5",
     "jsx": "react",
-    "noEmit": true
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "*": ["node_modules/*", "app/packs/*"],
+      "@src/*": ["./app/javascript/*"],
+      "@hooks/*": ["./app/javascript/hooks/*"],
+      "@styles/*": ["./app/javascript/styles/*"],
+      "@images/*": ["./app/assets/images/*"],
+      "@videos/*": ["./app/assets/videos/*"],
+      "@components/*": ["./app/javascript/components/*"],
+      "@libbe_configs/*": ["./app/libbe_configs/*"]
+    }
   },
   "exclude": ["**/*.spec.ts", "node_modules", "vendor", "public"],
   "compileOnSave": false

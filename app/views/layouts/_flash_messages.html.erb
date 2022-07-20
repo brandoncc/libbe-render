@@ -1,0 +1,11 @@
+<% if flash.key?("success") %>
+  <div class="flash-message success"><%= flash["success"] %></div>
+<% end %>
+
+<% if flash.key?("alert") %>
+  <div class="flash-message alert"><%= flash["alert"] %></div>
+<% end %>
+
+<% if flash.key?("warning") %>
+  <div class="flash-message warning"><%= flash["warning"] %></div>
+<% end %>
