@@ -34,7 +34,13 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+# Note: I switched from sassc-rails to sass-rails because Heroku continually failed to install sassc-rails. I attempted
+# the following downgrades in various combinations but couldn't resolve the failed deployments:
+#
+# - mini_racer to 0.5.0 and 0.4.0
+# - sassc-rails to 2.1.1
+# - Ruby to 3.0.4
+gem "sass-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
